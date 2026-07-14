@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FORMA Design System v1</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--cream:#F8F5F1;--sand:#E9DED2;--mocha:#8A6A52;--espresso:#4E3B31;--blue:#7C96AC;--slate:#5F7386;--sage:#AEB8A4;}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,var(--cream),#eef3f6);color:var(--espresso);font-family:Manrope,sans-serif}
+main{max-width:1100px;margin:auto;padding:48px 24px}h1,h2,h3{font-family:'Instrument Serif',serif;font-weight:400}h1{font-size:64px;margin:0}h2{font-size:38px;margin-top:54px}.sub{font-size:18px;color:#756b65}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{grid-column:span 4;background:#fffdfb;border-radius:24px;padding:22px;box-shadow:0 18px 40px rgba(78,59,49,.10)}.wide{grid-column:span 12}.half{grid-column:span 6}.swatch{height:100px;border-radius:18px;margin-bottom:10px}.label{text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:#7b716b}.type-display{font:48px 'Instrument Serif',serif}.type-body{font:18px Manrope,sans-serif}.button{display:inline-block;background:var(--mocha);color:white;padding:13px 18px;border-radius:14px;font-weight:700}.pill{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--sand);margin:5px}.season{height:160px;border-radius:22px;padding:20px;color:white;display:flex;align-items:end;font-family:'Instrument Serif';font-size:32px}@media(max-width:760px){.card,.half{grid-column:span 12}h1{font-size:48px}}
+</style>
+</head>
+<body><main>
+<div class="label">Brand system v1</div><h1>FORMA</h1><div class="sub">Strength. Beautifully tracked.</div>
+<h2>Brand principles</h2>
+<div class="card wide"><span class="pill">Strength over skinny</span><span class="pill">Consistency over perfection</span><span class="pill">Progress over pressure</span><span class="pill">Leave people feeling better</span></div>
+<h2>Core palette</h2><div class="grid">
+<div class="card"><div class="swatch" style="background:#F8F5F1"></div><strong>cream</strong><div class="sub">#F8F5F1</div></div><div class="card"><div class="swatch" style="background:#E9DED2"></div><strong>sand</strong><div class="sub">#E9DED2</div></div><div class="card"><div class="swatch" style="background:#8A6A52"></div><strong>mocha</strong><div class="sub">#8A6A52</div></div><div class="card"><div class="swatch" style="background:#4E3B31"></div><strong>espresso</strong><div class="sub">#4E3B31</div></div><div class="card"><div class="swatch" style="background:#7C96AC"></div><strong>dustyBlue</strong><div class="sub">#7C96AC</div></div><div class="card"><div class="swatch" style="background:#5F7386"></div><strong>slateBlue</strong><div class="sub">#5F7386</div></div><div class="card"><div class="swatch" style="background:#AEB8A4"></div><strong>sage</strong><div class="sub">#AEB8A4</div></div><div class="card"><div class="swatch" style="background:#FFFDFC"></div><strong>white</strong><div class="sub">#FFFDFC</div></div>
+</div>
+<h2>Typography</h2><div class="grid">
+<div class="card half"><div class="label">Display</div><div class="type-display">Quiet strength.</div><div class="sub">Instrument Serif</div></div>
+<div class="card half"><div class="label">Body</div><div class="type-body">Clear, calm and easy to read across health data, rituals and training logs.</div><div class="sub">Manrope</div></div>
+</div>
+<h2>Seasonal system</h2><div class="grid">
+<div class="card"><div class="season" style="background:linear-gradient(140deg,#9EAE93,#EAF0E5)">Wood / Spring</div><p>Growth</p></div><div class="card"><div class="season" style="background:linear-gradient(140deg,#C98663,#F5E1D5)">Fire / Summer</div><p>Confidence</p></div><div class="card"><div class="season" style="background:linear-gradient(140deg,#B89A72,#EEE1CE)">Earth / Late Summer</div><p>Nourishment</p></div><div class="card"><div class="season" style="background:linear-gradient(140deg,#A9A29A,#ECE8E3)">Metal / Autumn</div><p>Refinement</p></div><div class="card"><div class="season" style="background:linear-gradient(140deg,#6F879C,#DDE7EF)">Water / Winter</div><p>Restoration</p></div>
+</div>
+<h2>UI language</h2><div class="grid"><div class="card half"><div class="label">Primary action</div><div style="margin-top:14px"><span class="button">Begin ritual</span></div></div>
+<div class="card half"><div class="label">Voice</div><p>Supportive, calm and non-judgmental. Replace failure language with gentle next steps.</p></div></div>
+</main></body></html>
