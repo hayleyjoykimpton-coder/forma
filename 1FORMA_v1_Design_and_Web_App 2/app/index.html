@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#8A6A52"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+<title>FORMA</title></head><body>
+<header><div class="brand"><div class="mark">F</div><div><h1>FORMA</h1><div class="tag">Strength. Beautifully tracked.</div></div></div></header>
+<main>
+<section id="today" class="page active">
+  <div class="hero"><div class="label" style="color:white">WOOD · SPRING</div><h2>Good morning.</h2><p>Growth begins with small rituals repeated with care.</p></div>
+  <div class="grid">
+    <div class="card half"><div class="label">Today’s ritual</div><div id="todayRituals" class="stack"></div><div class="progress" style="margin-top:12px"><div id="ritualBar"></div></div><div class="small" id="ritualPct" style="margin-top:7px">0% complete</div></div>
+    <div class="card half"><div class="label">Reward</div><div class="crystal" id="crystal"></div><div class="small" style="text-align:center">Complete today’s rituals to brighten your crystal.</div></div>
+    <div class="card half"><div class="label">Morning gratitude</div><div class="stack"><input id="g1" placeholder="I’m grateful for..."><input id="g2" placeholder="I’m grateful for..."><input id="g3" placeholder="I’m grateful for..."></div></div>
+    <div class="card half"><div class="label">Today’s affirmation</div><div class="metric" id="affirmation">I am building strength with care.</div><button class="btn soft" style="margin-top:12px" onclick="newAffirmation()">New affirmation</button></div>
+  </div>
+</section>
+
+<section id="rituals" class="page">
+  <div class="grid">
+    <div class="card"><div class="label">Ritual builder</div><div class="small">Create morning and evening routines that suit your life.</div></div>
+    <div class="card half"><div class="label">Morning</div><div id="morningList" class="stack"></div><button class="btn mocha" onclick="addRitual('morning')" style="margin-top:12px">Add ritual</button></div>
+    <div class="card half"><div class="label">Evening</div><div id="eveningList" class="stack"></div><button class="btn mocha" onclick="addRitual('evening')" style="margin-top:12px">Add ritual</button></div>
+  </div>
+</section>
+
+<section id="train" class="page">
+  <div class="grid"><div class="card"><div class="label">Workout builder</div><div style="display:flex;gap:10px"><input id="workoutName" placeholder="New workout name"><button class="btn mocha" onclick="addWorkout()">Add day</button></div></div><div id="workoutCards" class="card"></div></div>
+</section>
+
+<section id="nourish" class="page">
+  <div class="grid">
+    <div class="card half"><div class="label">Supplements</div><div id="suppList" class="stack"></div><div style="display:flex;gap:8px;margin-top:10px"><input id="suppName" placeholder="Supplement"><input id="suppTiming" placeholder="Timing"><button class="btn mocha" onclick="addSupp()">Add</button></div></div>
+    <div class="card half"><div class="label">Meal log</div><input id="mealPhoto" type="file" accept="image/*" capture="environment"><div class="stack" style="margin-top:10px"><input id="mealName" placeholder="Meal"><input id="mealProtein" type="number" placeholder="Protein g"><input id="mealCarbs" type="number" placeholder="Carbs g"><input id="mealFat" type="number" placeholder="Fat g"><button class="btn mocha" onclick="saveMeal()">Save meal</button></div><div id="mealList" class="stack" style="margin-top:12px"></div></div>
+  </div>
+</section>
+
+<section id="progress" class="page">
+  <div class="grid">
+    <div class="card half"><div class="label">InBody</div><div class="stack"><input id="scanDate" type="date"><input id="scanWeight" type="number" step=".1" placeholder="Weight kg"><input id="scanSMM" type="number" step=".1" placeholder="SMM kg"><input id="scanBF" type="number" step=".1" placeholder="Body fat %"><button class="btn mocha" onclick="saveScan()">Save scan</button></div><div id="scanList" class="stack" style="margin-top:12px"></div></div>
+    <div class="card half"><div class="label">Progress photos</div><input id="photoInput" type="file" accept="image/*" capture="environment"><select id="pose" style="margin-top:8px"><option>Front</option><option>Side</option><option>Back</option></select><button class="btn mocha" onclick="savePhoto()" style="margin-top:8px">Save photo</button><div id="photoGallery" class="gallery" style="margin-top:12px"></div></div>
+  </div>
+</section>
+
+<section id="mind" class="page">
+  <div class="grid">
+    <div class="card half"><div class="label">Resonant breathing</div><div class="metric">5 minutes</div><p class="small">Breathe gently, letting the exhale lengthen without strain.</p><button class="btn mocha" onclick="startBreath()">Start timer</button><div class="metric" id="timer" style="margin-top:10px">05:00</div></div>
+    <div class="card half"><div class="label">Energy conversion box</div><textarea id="box" placeholder="What are you placing in the box today?"></textarea></div>
+    <div class="card half"><div class="label">Protective energy sphere</div><p class="small">Visualise a calm sphere of light around you. Let supportive energy remain while stress passes without attaching.</p></div>
+    <div class="card half"><div class="label">Resilience reflection</div><textarea id="resilience" placeholder="What challenged me? What did I control? What will I carry forward?"></textarea></div>
+  </div>
+</section>
+</main>
+<nav class="tabs">
+<button class="active" data-page="today"><span>⌂</span>Today</button>
+<button data-page="rituals"><span>☼</span>Rituals</button>
+<button data-page="train"><span>↗</span>Train</button>
+<button data-page="nourish"><span>◌</span>Nourish</button>
+<button data-page="progress"><span>▣</span>Progress</button>
+<button data-page="mind"><span>◇</span>Mind</button>
+</nav>
+<script src="app.js"></script></body></html>
